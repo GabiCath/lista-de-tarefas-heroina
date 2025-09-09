@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heroína das Tarefas</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="app-header">
+  <h1 class="title">Heroína das Tarefas</h1>
+  <div class="controls">
+    <div class="input-group">
+      <input id="task-input" type="text" placeholder="Digite uma tarefa">
+      <select id="task-category">
+        <option value="Trabalho Doméstico">Trabalho Doméstico</option>
+        <option value="Trabalho Formal">Trabalho Formal</option>
+        <option value="Estudos">Estudos</option>
+        <option value="Hobbies">Hobbies</option>
+      </select>
+      <input id="task-date" type="date">
+      <button id="add-btn" class="btn primary">Adicionar</button>
+    </div>
+    <div class="toolbar">
+      <div class="chips" id="category-chips">
+        <button data-cat="Todas" class="chip active">Todas</button>
+        <button data-cat="Trabalho Doméstico" class="chip">Doméstico</button>
+        <button data-cat="Trabalho Formal" class="chip">Formal</button>
+        <button data-cat="Estudos" class="chip">Estudos</button>
+        <button data-cat="Hobbies" class="chip">Hobbies</button>
+      </div>
+      <div class="sorter">
+        <button id="sort-asc" class="btn ghost">A→Z</button>
+        <button id="sort-desc" class="btn ghost">Z→A</button>
+        <button id="sort-date-asc" class="btn ghost">Data ↑</button>
+        <button id="sort-date-desc" class="btn ghost">Data ↓</button>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="content">
+  <ul id="task-list" class="task-list"></ul>
+</main>
+<script src="app.js" defer></script>
+</body>
+</html>
